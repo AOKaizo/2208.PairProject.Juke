@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
+import Albums from "./components/albums/Albums";
 
 const App = () => {
   return (
-    <div className='row container'>
-      {/* The music starts here! */}
-    </div>
+    <>
+      <h1>hello</h1>;
+      <Albums />
+    </>
   );
 };
 
