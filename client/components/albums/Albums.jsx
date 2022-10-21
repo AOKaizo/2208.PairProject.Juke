@@ -1,23 +1,20 @@
 import React from "react";
 
-const Albums = () => {
-  return (
-    // <!-- All Albums -->
-    <div id="albums" class="row wrap">
+const Albums = ({ albumsArray }) => {
+  const renderAlbums = albumsArray.map((album) => {
+    return (
       <div className="album">
         <a>
           <img src="default-album.jpg" />
-          <p>ALBUM 1</p>
-          <small>Artist Name</small>
+          <p>{album.name}</p>
+          <small>{album.artist.name}</small>
         </a>
       </div>
-      <div class="album">
-        <a>
-          <img src="default-album.jpg" />
-          <p>ALBUM 2</p>
-          <small>Artist Name</small>
-        </a>
-      </div>
+    );
+  });
+  return (
+    <div id="albums" className="row wrap">
+      {[renderAlbums]}
     </div>
   );
 };
