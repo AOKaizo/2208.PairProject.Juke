@@ -5,7 +5,7 @@ const Albums = ({ albumsArray }) => {
     return (
       <div className="album">
         <a>
-          <img src="default-album.jpg" />
+          <img src={album.artworkUrl} />
           <p>{album.name}</p>
           <small>{album.artist.name}</small>
         </a>
